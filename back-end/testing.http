@@ -1,0 +1,29 @@
+POST http://localhost:3000/book HTTP/1.1
+content-type: application/json
+
+{
+    "isbn": "0123456789",
+    "title": "Server-side JS for Fun and Profit!"
+}
+
+POST http://localhost:3000/book HTTP/1.1
+content-type: application/json
+
+{
+    "isbn": "9876543210",
+    "title": "Client-side JS Part II"
+}
+
+GET http://localhost:3000/books HTTP/1.1
+
+GET http://localhost:3000/book/0123456789 HTTP/1.1
+
+DELETE http://localhost:3000/book/9876543210 HTTP/1.1
+
+POST http://localhost:3000/book/9876543210 HTTP/1.1
+content-type: application/json
+
+{
+    "isbn": "9876543210",
+    "title": "New title!"
+}
